@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Title>缓存服务，支持memory和redis</Title>
+    <Version>2.0.0</Version>
+    <Authors>DigRich</Authors>
+    <Company>www.digrich.cn</Company>
+    <PackageProjectUrl>https://github.com/DigRichCN/DigRichCore.Cache</PackageProjectUrl>
+    <Copyright>www.digrich.cn</Copyright>
+    <RepositoryUrl>https://github.com/DigRichCN/DigRichCore.Cache</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DigRich.Common" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.6.96" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
