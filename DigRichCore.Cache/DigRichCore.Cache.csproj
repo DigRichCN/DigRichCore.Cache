@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Title>缓存服务，支持memory和redis</Title>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <Authors>DigRich</Authors>
     <Company>www.digrich.cn</Company>
     <PackageProjectUrl>https://github.com/DigRichCN/DigRichCore.Cache</PackageProjectUrl>

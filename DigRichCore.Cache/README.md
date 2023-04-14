@@ -5,4 +5,4 @@
 	"ConnectionString":"redis连接字符串"
 }
 使用方法：
-services.AddRedisOrMemoryCaching(configure.GetSection<CacheConfig>("CacheConfig"))
+services.AddRedisOrMemoryCaching(configure.GetValue<CacheConfig>("CacheConfig"))

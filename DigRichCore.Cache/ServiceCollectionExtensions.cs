@@ -17,5 +17,14 @@ namespace DigRichCore.Cache {
                 services.AddSingleton<ICacheProvider, MemoryProvider>();
             }
         }
+        public static void AddRedisOrMemoryCaching(this IServiceCollection services, CacheConfig cfg) {
+            services.AddSingleton(cfg);
+            if (cfg.Provider.ToEString().ToLower() == "redis") {
+                services.AddSingleton<ICacheProvider, RedisProvider>();
+            }
+            else {
+                services.AddSingleton<ICacheProvider, MemoryProvider>();
+            }
+        }
     }
 }
