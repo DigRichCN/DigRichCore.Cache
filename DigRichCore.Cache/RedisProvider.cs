@@ -1,8 +1,10 @@
-﻿using Microsoft.Extensions.Options;
+﻿using DigRich.Common.Extension;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
 
@@ -17,7 +19,7 @@ namespace DigRichCore.Cache {
             if (cfg == null || string.IsNullOrWhiteSpace(cfg.ConnectionString))
                 throw new ApplicationException("配置文件中未找到RedisServer的有效配置");
             connectionMultiplexer = ConnectionMultiplexer.Connect(cfg.ConnectionString);
-            database = connectionMultiplexer.GetDatabase();
+            database = connectionMultiplexer.GetDatabase(cfg.Database);
         }
 
         /// <summary>

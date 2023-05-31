@@ -12,5 +12,9 @@ namespace DigRichCore.Cache {
         /// 当为redis时的连接字符串
         /// </summary>
         public string ConnectionString { get; set; }
+        /// <summary>
+        /// 指定数据库编号
+        /// </summary>
+        public int Database { get; set; } = -1;
     }
 }
